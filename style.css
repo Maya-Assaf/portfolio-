@@ -1,0 +1,259 @@
+/* Your existing styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbf5f5;
+    display: flex;
+    justify-content: space between;
+}
+
+.sidenav {
+    width: 250px;
+    background-color: #fbf5f5;
+    color: rgb(103, 101, 101);
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidenav2 {
+    width: 250px;
+    background-color: #fbf5f5;
+    color: rgb(103, 101, 101);
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    margin: 0px 1000px;
+}
+
+.sidenav2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidenav2 li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sidenav2 a {
+    text-decoration: none;
+    color: rgb(103, 101, 101);
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidenav2 a:hover {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translate(0, -5px); /* Move the image up slightly on hover */
+}
+
+.sidenav2 li li {
+    margin: 0px 0; /* Adjust the margin as needed */
+}
+
+.sidenav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidenav li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: rgb(103, 101, 101);
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidenav a:hover {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translate(0, -5px); /* Move the image up slightly on hover */
+}
+
+/* Adjust the margin between submenu items */
+.sidenav li li {
+    margin: 0px 0; /* Adjust the margin as needed */
+}
+
+.center{
+    text-align: center;
+}
+
+.details{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(92, 90, 90);
+}
+
+main {
+    margin-left: 270px; /* Slightly wider to accommodate the menu */
+    padding: 20px;
+}
+
+h1 {
+    color: #fbf5f5;
+}
+
+.video {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    margin: 50px 100px;
+}
+
+/* New styles for the image grid */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.image-row2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 100px;
+}
+
+.project2 {
+    text-align: center;
+    transition: transform 0.2s;
+    width: 40%; /* Set the width of each project */
+    margin: 0 5px; /* Adjust the margin to reduce the gap between images */
+    transform: translate(0, -5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a shadow effect */
+}
+
+.image-container2 {
+    position: relative;
+    width: 100%;
+}
+
+.project2 img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* .project2:hover {
+
+} */
+
+.project {
+    text-align: center;
+    transition: transform 0.2s;
+    width: 40%; /* Set the width of each project */
+    margin: 0 5px; /* Adjust the margin to reduce the gap between images */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.project img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.project p {
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center; /* Center the text */
+}
+
+.project:hover {
+    transform: translate(0, -5px); /* Move the image up slightly on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.neura {
+    margin: 50px 30px;
+    color: rgb(74, 175, 190);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.pharmaline {
+    margin: 50px 30px;
+    color: rgb(178, 115, 63);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.yugo {
+    margin: 50px 30px;
+    color: rgb(207, 74, 25);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.film {
+    margin: 50px 30px;
+    color: rgb(88, 85, 84);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.angry {
+    margin: 50px 30px;
+    color: rgb(193, 4, 86);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.bodies {
+    margin: 50px 30px;
+    color: rgb(17, 75, 181);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.maya {
+    font-family: 'Tilt Neon', sans-serif;
+    margin: 50px 30px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+/* Add this to your existing CSS code */
+.avatar {
+    border-radius: 50%;
+    margin: 50px 70px;
+}
+
+.mana {
+    font-family: 'Tilt Neon', sans-serif;
+    /* text-align: center; */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: -30px 0px;
+}
+
+.ma {
+    font-family: 'Tilt Neon', sans-serif;
+    /* text-align: center; */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.student{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;   
+}
