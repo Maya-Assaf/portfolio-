@@ -255,5 +255,54 @@
                                                 </div>
 
     </main>
+    <style>
+        /* Make the page responsive */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style for video to be responsive */
+        .video {
+            width: 100%;
+            height: auto;
+            max-width: 640px; /* Limit max width for larger screens */
+        }
+
+        /* Responsive layout adjustments for images */
+        .image-row2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .project2 {
+            flex: 1 1 45%; /* 2 items per row for medium and larger screens */
+            max-width: 45%;
+        }
+
+        /* Ensure images scale well within containers */
+        .image-container2 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            .project2 {
+                flex: 1 1 100%; /* Stack items on small screens */
+                max-width: 100%;
+            }
+
+            .sidenav ul, .sidenav ul li {
+                font-size: 16px; /* Adjust font for smaller screens */
+            }
+
+            .details .center {
+                padding: 10px;
+            }
+        }
+    </style>
 </body>
 </html>

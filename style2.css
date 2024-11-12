@@ -8,15 +8,151 @@ body {
     justify-content: space between;
 }
 
-.sidenav {
+/* .sidenav {
     width: 250px;
     background-color: #fbf5f5;
     color: rgb(103, 101, 101);
     position: fixed;
     height: 100%;
     overflow-y: auto;
+} */
+
+body {
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(to right, #e2e6ea, #f8f9fa);
+    color: #333;
 }
 
+.sidenav {
+    width: 250px;
+    background: linear-gradient(135deg, #4e6b7c, #7a8e9d);
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav a, .sidenav h2, .sidenav h5 {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-family: 'Playfair Display', serif;
+}
+
+.sidenav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.submenu-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.submenu-list li a {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 30px;
+}
+
+.submenu-list li a:hover {
+    color: #ffffff;
+}
+
+.container-fluid {
+    margin-left: 270px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sidebar {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sidebar h2 {
+    font-size: 1.3rem;
+    color: #34495e; /* Darker shade for headers */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.profile-sidebar ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.profile-sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.profile-sidebar ul li h2 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.main-section h2,
+.main-section h3 {
+    color: #34495e; /* Dark grey for a professional look */
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+.main-section h2::after,
+.main-section h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #7a8e9d; /* Matching the sidebar gradient color */
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.main-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.avatar {
+    border: 4px solid #34495e;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+.list-unstyled li h2 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+button, .nav-link, a {
+    transition: transform 0.2s;
+}
+
+button:hover, .nav-link:hover, a:hover {
+    transform: scale(1.05);
+}
 
 .sidenav2 {
     width: 250px;

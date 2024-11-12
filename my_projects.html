@@ -4,11 +4,46 @@
     <title>My Projects</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Responsive Styles Only */
+        @media (max-width: 768px) {
+            /* Stack projects vertically on smaller screens */
+            .image-row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
 
+            .project {
+                width: 90%;
+                max-width: 300px;
+            }
+
+            /* Adjust font sizes for better readability on smaller screens */
+            h1 {
+                font-size: 1.8em;
+                text-align: center;
+            }
+            .sidenav ul li a h2, .sidenav ul li a h5 {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Further adjustments for extra-small screens */
+            h1 {
+                font-size: 1.5em;
+            }
+            .sidenav ul li a h2, .sidenav ul li a h5 {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="sidenav">
@@ -22,58 +57,57 @@
                     <li><a href="pharmaline.html">Pharmaline</a></li>
                     <li><a href="angry_birds_simulation.html">Angry Birds Simulation</a></li>
                     <li><a href="filmatica.html">Filmatica</a></li>
-                    <li><a href="galaxy_simulation.html">Celestial Bodeis Simulation</a></li>
+                    <li><a href="galaxy_simulation.html">Celestial Bodies Simulation</a></li>
                 </ul>
             </li>
             <li><a href="contact.html"><h5>Contact</h5></a></li>
         </ul>
     </nav>
-    
 
     <main>
         <h1>My Projects</h1>
-        
+
         <!-- First Row of Images -->
         <div class="image-row">
             <div class="project">
                 <div class="image-container">
-                 <a href="neura.html"> <img src="neura.png" alt="Project 1"></a> 
+                    <a href="neura.html"><img src="neura.png" alt="Project 1"></a>
                 </div>
                 <p>Neura</p>
             </div>
             <div class="project">
                 <div class="image-container">
-                    <a href="yugo.html"> <img src="yugo.jpeg" alt="Project 2"></a> 
+                    <a href="yugo.html"><img src="yugo.jpeg" alt="Project 2"></a>
                 </div>
                 <p>Yugo</p>
             </div>
             <div class="project">
                 <div class="image-container">
-                    <a href="pharmaline.html"> <img src="pharmaline.png" alt="Project 3"></a> 
+                    <a href="pharmaline.html"><img src="pharmaline.png" alt="Project 3"></a>
                 </div>
                 <p>Pharmaline</p>
             </div>
         </div>
-        
+
         <!-- Second Row of Images -->
         <div class="image-row">
             <div class="project">
                 <div class="image-container">
-                    <a href="angry_birds_simulation.html"> <img src="angry.png" alt="Project 4"></a> 
+                    <a href="angry_birds_simulation.html"><img src="angry.png" alt="Project 4"></a>
                 </div>
                 <p>Angry Birds Simulation</p>
             </div>
             <div class="project">
                 <div class="image-container">
-                    <a href="filmatica.html"> <img src="filmatica.jpg" alt="Project 1"></a> 
+                    <a href="filmatica.html"><img src="filmatica.jpg" alt="Project 1"></a>
                 </div>
                 <p>Filmatica</p>
             </div>
             <div class="project">
                 <div class="image-container">
-                    <a href="galaxy_simulation.html"> <img src="galaxy.jpg" alt="Project 1"></a> 
+                    <a href="galaxy_simulation.html"><img src="galaxy.jpg" alt="Project 1"></a>
                 </div>
-                <p>Celestial Bodeis Simulation</p>
+                <p>Celestial Bodies Simulation</p>
             </div>
         </div>
     </main>
