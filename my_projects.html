@@ -43,6 +43,35 @@
                 font-size: 1em;
             }
         }
+        .project-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(120,144,160,0.10);
+            width: 270px;
+            margin-bottom: 24px;
+            text-align: center;
+            border: 2px solid #7890A0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+        .project-card h3 {
+            color: #7890A0;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0;
+            padding: 18px 12px;
+        }
+        .project-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px rgba(120,144,160,0.18);
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +81,11 @@
             <li class="submenu">
                 <a href="my_projects.html"><h5>My Projects</h5></a>
                 <ul>
+                    <li><a href="Puzzel_Solver.html">Puzzel Solver</a></li>
+                    <li><a href="Motion Capture for Animated Film Production.html">Motion Capture for Animated Film Production</a></li>
+                    <li><a href="Predicting Student Dropout Causes.html">Predicting Student Dropout Causes</a></li>
+                    <li><a href="Chicago Street Accidents Analysis.html">Chicago Street Accidents Analysis</a></li>
+                    <li><a href="Intelligent Spelling Correction System.html">Intelligent Spelling Correction System</a></li>
                     <li><a href="neura.html">Neura</a></li>
                     <li><a href="yugo.html">Yugo</a></li>
                     <li><a href="pharmaline.html">Pharmaline</a></li>
@@ -65,49 +99,73 @@
     </nav>
 
     <main>
-        <h1>My Projects</h1>
-
-        <!-- First Row of Images -->
-        <div class="image-row">
-            <div class="project">
-                <div class="image-container">
-                    <a href="neura.html"><img src="neura.png" alt="Project 1"></a>
+        <h1 style="color:#7890A0; font-family:'Playfair Display',serif; text-align:center; margin-bottom:40px;">My Projects</h1>
+        <div style="display:flex; flex-wrap:wrap; gap:32px; justify-content:center;">
+            <div class="project-card">
+                <a href="neura.html"><img src="neura.png" alt="Neura"></a>
+                <div>
+                    <h3>Neura</h3>
                 </div>
-                <p>Neura</p>
             </div>
-            <div class="project">
-                <div class="image-container">
-                    <a href="yugo.html"><img src="yugo.jpeg" alt="Project 2"></a>
+            <div class="project-card">
+                <a href="yugo.html"><img src="yugo.jpeg" alt="Yugo"></a>
+                <div>
+                    <h3>Yugo</h3>
                 </div>
-                <p>Yugo</p>
             </div>
-            <div class="project">
-                <div class="image-container">
-                    <a href="pharmaline.html"><img src="pharmaline.png" alt="Project 3"></a>
+            <div class="project-card">
+                <a href="pharmaline.html"><img src="pharmaline.png" alt="Pharmaline"></a>
+                <div>
+                    <h3>Pharmaline</h3>
                 </div>
-                <p>Pharmaline</p>
             </div>
-        </div>
-
-        <!-- Second Row of Images -->
-        <div class="image-row">
-            <div class="project">
-                <div class="image-container">
-                    <a href="angry_birds_simulation.html"><img src="angry.png" alt="Project 4"></a>
+            <div class="project-card">
+                <a href="angry_birds_simulation.html"><img src="angry.png" alt="Angry Birds Simulation"></a>
+                <div>
+                    <h3>Angry Birds Simulation</h3>
                 </div>
-                <p>Angry Birds Simulation</p>
             </div>
-            <div class="project">
-                <div class="image-container">
-                    <a href="filmatica.html"><img src="filmatica.jpg" alt="Project 1"></a>
+            <div class="project-card">
+                <a href="filmatica.html"><img src="filmatica.jpg" alt="Filmatica"></a>
+                <div>
+                    <h3>Filmatica</h3>
                 </div>
-                <p>Filmatica</p>
             </div>
-            <div class="project">
-                <div class="image-container">
-                    <a href="galaxy_simulation.html"><img src="galaxy.jpg" alt="Project 1"></a>
+            <div class="project-card">
+                <a href="galaxy_simulation.html"><img src="galaxy.jpg" alt="Celestial Bodies Simulation"></a>
+                <div>
+                    <h3>Celestial Bodies Simulation</h3>
                 </div>
-                <p>Celestial Bodies Simulation</p>
+            </div>
+            <div class="project-card">
+                <a href="Puzzel_Solver.html"><img src="puzzle.png" alt="Puzzel Solver"></a>
+                <div>
+                    <h3>Puzzel Solver</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <a href="Motion Capture for Animated Film Production.html"><img src="motion.png" alt="Motion Capture for Animated Film Production"></a>
+                <div>
+                    <h3>Motion Capture for Animated Film Production</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <a href="Predicting Student Dropout Causes.html"><img src="student.png" alt="Predicting Student Dropout Causes"></a>
+                <div>
+                    <h3>Predicting Student Dropout Causes</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <a href="Chicago Street Accidents Analysis.html"><img src="Chicago.png" alt="Chicago Street Accidents Analysis"></a>
+                <div>
+                    <h3>Chicago Street Accidents Analysis</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <a href="Intelligent Spelling Correction System.html"><img src="spelling.png" alt="Intelligent Spelling Correction System"></a>
+                <div>
+                    <h3>Intelligent Spelling Correction System</h3>
+                </div>
             </div>
         </div>
     </main>
