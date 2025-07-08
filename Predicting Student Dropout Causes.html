@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Neura</title>
+    <title>Student Dropout Causes</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,15 +35,78 @@
     </nav>
     
     <main>
-        <h2 class="neura">Predicting Student Dropout Causes</h2>
-        <p > <div class="details"><div class="center">Analyzed extensive datasets on students and factors influencing dropout rates, using machine learning, deep learning, and data mining techniques. Developed predictive models to identify key factors contributing to student attrition, providing insights into possible interventions to support student retention.
-            <br/>
-            <br/>
-            <br/>
-             
-        </p>
-            
-
+        <section >
+            <h2 class="neura">Predicting Student Dropout Causes</h2>
+            <h3>Project Title: Student Dropout Dataset Analysis</h3>
+            <p class="overview">This project aimed to explore, analyze, and model student dropout behavior using a dataset composed of institutional records and demographic information. The primary objective was to identify the key factors contributing to student attrition, understand the underlying socio-economic and academic dynamics, and build predictive models to estimate dropout risk. Insights from this analysis were intended to support the development of early warning systems and targeted intervention strategies for at-risk students.</p>
+            <h4>1. Dataset Overview:</h4>
+            <ul>
+                <li><b>Data Sources:</b> Institutional academic records, attendance logs, demographic attributes, socio-economic indicators, and historical dropout labels.</li>
+                <li><b>Data Cleaning:</b> Addressed missing values, inconsistent labels, outliers, and irrelevant features using pandas and numpy.</li>
+                <li><b>Feature Engineering:</b> Derived new features such as GPA trend, absenteeism rate, course load, family income bracket, and parental education level.</li>
+                <li><b>Label Encoding & Scaling:</b> Applied encoding for categorical features and standardization for numerical variables to prepare data for modeling.</li>
+            </ul>
+            <h4>2. Exploratory Data Analysis (EDA):</h4>
+            <ul>
+                <li><b>Descriptive Statistics:</b> Summarized distributions of academic performance, attendance, and socio-economic factors.</li>
+                <li><b>Correlation Analysis:</b> Used Pearson and Spearman coefficients to identify relationships between variables and dropout likelihood.</li>
+                <li><b>Visualization:</b> Utilized Matplotlib and Seaborn to create heatmaps, boxplots, histograms, and time-series plots for trend discovery.</li>
+                <li><b>Temporal Trends:</b> Analyzed changes in dropout rates over academic terms/years and their correlation with policy or curriculum changes.</li>
+            </ul>
+            <h4>3. Modeling and Prediction:</h4>
+            <ul>
+                <li><b>Problem Framing:</b> Treated dropout prediction as a binary classification task.</li>
+                <li><b>Model Selection:</b> Evaluated multiple models including Logistic Regression, Decision Trees, Random Forests, and Support Vector Machines (SVM).</li>
+                <li><b>Hyperparameter Tuning:</b> Performed grid search and cross-validation to optimize model performance.</li>
+                <li><b>Performance Metrics:</b> Used precision, recall, F1-score, and ROC-AUC to evaluate and compare models.</li>
+                <li><b>Feature Importance:</b> Interpreted the most impactful variables contributing to dropout using feature importance from tree-based models.</li>
+            </ul>
+            <h4>4. Results and Insights:</h4>
+            <ul>
+                <li><b>Key Dropout Indicators:</b> Identified low GPA trajectory, high absenteeism, low parental education, and financial hardship as major dropout predictors.</li>
+                <li><b>Predictive Accuracy:</b> Achieved a model with high recall and F1-score, suitable for early-risk identification.</li>
+                <li><b>Actionable Recommendations:</b> Suggested personalized intervention plans, policy modifications, and support programs based on model insights.</li>
+            </ul>
+            <h4>Technologies Used:</h4>
+            <ul class="tech-list">
+                <li>Python: For all analysis, preprocessing, and modeling.</li>
+                <li>pandas & numpy: For data handling and manipulation.</li>
+                <li>scikit-learn & scipy: For machine learning models and statistical analysis.</li>
+                <li>matplotlib & seaborn: For data visualization and reporting.</li>
+            </ul>
+            <h4>Outcome:</h4>
+            <p class="outcome">The project delivered a data-driven framework for understanding and predicting student dropout, enabling educational institutions to proactively support students through data-informed strategies and reduce attrition rates.</p>
+        </section>
+        <section class="gallery-section">
+            <h3 class="gallery-title">Student Gallery</h3>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="student.png" alt="Student">
+                    <!-- <figcaption>Student</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="student1.png" alt="Student">
+                    <!-- <figcaption>Student</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="student2.png" alt="Student">
+                    <!-- <figcaption>Student</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="student3.png" alt="Student">
+                    <!-- <figcaption>Student</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="student4.png" alt="Student">
+                    <!-- <figcaption>Student</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="student5.png" alt="Student">
+                    <!-- <figcaption>Student</figcaption> -->
+                </figure>
+                <!-- Add more student images here if available, e.g. student2.png, student3.png, etc. -->
+            </div>
+        </section>
     </main>
     <style>
         /* Make the page responsive */
@@ -52,47 +114,144 @@
             box-sizing: border-box;
         }
 
-        /* Style for video to be responsive */
-        .video {
-            width: 100%;
-            height: auto;
-            max-width: 640px; /* Limit max width for larger screens */
+        /* Enhanced Project Description */
+        .project-description {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 32px 24px 24px 24px;
+            margin: 32px auto 24px auto;
+            max-width: 900px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            font-family: 'Merriweather', serif;
         }
-
-        /* Responsive layout adjustments for images */
-        .image-row2 {
+        .project-description h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            margin-bottom: 0.2em;
+        }
+        .project-description h3, .project-description h4 {
+            margin-top: 1.2em;
+            color: #2d3a4a;
+        }
+        .project-description .overview, .project-description .outcome {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+        .project-description ol, .project-description ul {
+            margin-left: 1.5em;
+            margin-bottom: 0.7em;
+        }
+        .project-description .tech-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+        }
+        .project-description .tech-list li {
+            background: #e3e7ed;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 1em;
         }
 
-        .project2 {
-            flex: 1 1 45%; /* 2 items per row for medium and larger screens */
-            max-width: 45%;
+        /* Gallery Section */
+        .gallery-section {
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            padding: 0 16px;
         }
-
-        /* Ensure images scale well within containers */
-        .image-container2 img {
+        .gallery-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7em;
+            margin-bottom: 1.2em;
+            color: #2d3a4a;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            justify-items: center;
+        }
+        .gallery-grid figure {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            overflow: hidden;
+        }
+        .gallery-grid img {
             width: 100%;
-            height: auto;
+            max-width: 220px;
+            height: 180px;
+            object-fit: cover;
             display: block;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.25s;
+        }
+        .gallery-grid figure:hover {
+            box-shadow: 0 4px 24px rgba(60,60,90,0.13);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .gallery-grid figure:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-grid figcaption {
+            font-size: 1em;
+            color: #444;
+            padding: 10px 0 12px 0;
+            background: #f4f6fa;
         }
 
         /* Mobile adjustments */
         @media (max-width: 600px) {
-            .project2 {
-                flex: 1 1 100%; /* Stack items on small screens */
-                max-width: 100%;
+            .project-description {
+                padding: 14px 4vw 14px 4vw;
             }
-
-            .sidenav ul, .sidenav ul li {
-                font-size: 16px; /* Adjust font for smaller screens */
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
-
-            .details .center {
-                padding: 10px;
+            .gallery-title {
+                font-size: 1.2em;
             }
+        }
+        /* Sidenav and other existing styles remain unchanged */
+        .demo-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+            margin: 24px auto 20px auto;
+            padding: 8px 20px;
+            background: #6e8796;
+            color: #fff;
+            font-size: 1em;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 18px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(110,135,150,0.10);
+            transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+            position: relative;
+            outline: none;
+        }
+        .demo-button .play-icon {
+            font-size: 1.1em;
+            margin-right: 4px;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));
+        }
+        .demo-button:hover, .demo-button:focus {
+            background: #5a6e7c;
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px rgba(110,135,150,0.18);
+            color: #fff;
         }
     </style>
 </body>

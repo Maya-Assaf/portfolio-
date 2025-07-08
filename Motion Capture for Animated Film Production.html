@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Neura</title>
+    <title>Motion Capture</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,14 +35,91 @@
     </nav>
     
     <main>
-        <h2 class="neura">Motion Capture for Animated Film Production</h2>
-        <p > <div class="details"><div class="center">Developed a project that captures motion in a lab equipped with multiple optical cameras and sensors. Applied deep learning techniques to process the data, reconstruct missing parts, and transfer it to a 3D model. Corrected distortions and interactions to achieve realistic motion that closely resembles the original captured movement, ultimately producing an animated film.
-            <br/>
-            <br/>
-             
-        </p>
-            
+        <section >
+            <h2 class="neura">Motion Capture for Animated Film Production</h2>
+            <h3>Project Title: AI-Powered Motion Reconstruction Using Deep Learning</h3>
+            <p class="overview">This project focuses on reconstructing missing motion-capture (mocap) data using deep learning techniques. Motion-capture systems often suffer from occlusions or sensor failures that result in partial or corrupted datasets. This system is designed to recover high-fidelity motion sequences even when a significant number of motion markers are missing, making it particularly useful for applications in animation, sports science, rehabilitation, and biomechanics research.</p>
+            <h4>1. Problem Statement:</h4>
+            <p>Motion capture data typically consists of 3D positional information of multiple markers placed on a subject. In real-world scenarios, some markers are frequently lost due to occlusion or interference. This project aims to reconstruct those missing markers with high spatial accuracy, even in extreme cases where only 11 out of 41 markers remain.</p>
+            <h4>2. Dataset and Preprocessing:</h4>
+            <ul>
+                <li><b>Binary Motion Data:</b> Input files are typically in binary format and handled using Python's built-in <code>os</code> module along with custom parsing utilities.</li>
+                <li><b>BTK (Biomechanical ToolKit):</b> Used for loading and processing mocap data.</li>
+                <li><b>Data Normalization:</b> Marker positions are normalized per frame to ensure consistency.</li>
+                <li><b>Masking Strategy:</b> A dynamic masking approach is applied to simulate missing markers during training.</li>
+                <li><b>Noise Injection:</b> Controlled noise is added to simulate real-world uncertainty and improve model robustness.</li>
+            </ul>
+            <h4>3. Model Architecture:</h4>
+            <ul>
+                <li><b>Autoencoder:</b> A symmetric encoder-decoder structure is used to learn compact, latent representations of motion frames.</li>
+                <li><b>LSTM Layers:</b> Long Short-Term Memory layers are used to capture temporal dependencies between motion frames, allowing the model to infer missing trajectories based on motion history.</li>
+                <li><b>Combined Network:</b> The encoder compresses input frames into latent space, which is then processed by LSTMs to reconstruct missing markers through the decoder.</li>
+            </ul>
+            <h4>4. Training Techniques:</h4>
+            <ul>
+                <li><b>Gradient Clipping:</b> Prevents exploding gradients in LSTM layers.</li>
+                <li><b>Weight Decay (L2 Regularization):</b> Controls overfitting and ensures generalization.</li>
+                <li><b>Loss Function:</b> Custom loss function measuring Euclidean distance between predicted and ground truth marker positions.</li>
+                <li><b>Batch Training:</b> Efficient training using mini-batches processed with TensorFlow and Keras.</li>
+            </ul>
+            <h4>5. Evaluation and Results:</h4>
+            <ul>
+                <li><b>Reconstruction Accuracy:</b> The system achieved an average positional error of less than 5 cm in cases where 30 out of 41 markers were missing.</li>
+                <li><b>Robustness:</b> The model generalizes well to various movement types (walking, running, jumping) and performs under both simulated and real missing-marker conditions.</li>
+                <li><b>Visualization:</b> Matplotlib is used to visualize marker trajectories before and after reconstruction.</li>
+            </ul>
+            <h4>Technologies Used:</h4>
+            <ul class="tech-list">
+                <li>Python: Core language for data handling and implementation.</li>
+                <li>TensorFlow & Keras: Deep learning frameworks used to build and train the model.</li>
+                <li>NumPy & Pandas: For data manipulation and matrix operations.</li>
+                <li>Matplotlib: For visualization of motion sequences.</li>
+                <li>BTK: Specialized toolkit for reading and processing mocap files.</li>
+            </ul>
+            <h4>Outcome:</h4>
+            <p class="outcome">The developed system effectively reconstructs high-dimensional motion data under severe marker-loss conditions, demonstrating potential for real-time recovery in motion analysis pipelines and offering critical utility for animators, biomechanists, and sports scientists.</p>
+        </section>
 
+        <a class="demo-button" href="https://www.youtube.com/watch?v=mQ4U13FAR_s" target="_blank" rel="noopener" aria-label="Watch Demo on YouTube">
+            <span class="play-icon">▶️</span> Watch Demo
+        </a>
+        <section class="gallery-section">
+            <h3 class="gallery-title">Project Gallery</h3>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="motion.png" alt="System Capture Data">
+                    <figcaption>System Capture Data</figcaption>
+                </figure>
+                <figure>
+                    <img src="motion1.png" alt="Masked Input (Missing Markers)">
+                    <figcaption>Markers</figcaption>
+                </figure>
+                <figure>
+                    <img src="motion2.png" alt="Autoencoder Latent Representation">
+                    <figcaption>Autoencoder Latent Representation</figcaption>
+                </figure>
+                <figure>
+                    <img src="motion3.png" alt="LSTM Temporal Modeling">
+                    <figcaption>LSTM Temporal Modeling</figcaption>
+                </figure>
+                <figure>
+                    <img src="motion4.png" alt="Reconstructed Motion Sequence">
+                    <figcaption>Reconstructed Motion Sequence</figcaption>
+                </figure>
+                <figure>
+                    <img src="motion5.png" alt="Ground Truth vs. Predicted Trajectories">
+                    <figcaption>Ground Truth vs. Predicted Trajectories</figcaption>
+                </figure>
+                <figure>
+                    <img src="motion6.png" alt="Visualization of Marker Recovery">
+                    <figcaption>Visualization of Marker Recovery</figcaption>
+                </figure>
+                <figure>
+                    <img src="motion7.png" alt="Application in Animation Pipeline">
+                    <figcaption>Application in Animation Pipeline</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
     <style>
         /* Make the page responsive */
@@ -51,47 +127,144 @@
             box-sizing: border-box;
         }
 
-        /* Style for video to be responsive */
-        .video {
-            width: 100%;
-            height: auto;
-            max-width: 640px; /* Limit max width for larger screens */
+        /* Enhanced Project Description */
+        .project-description {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 32px 24px 24px 24px;
+            margin: 32px auto 24px auto;
+            max-width: 900px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            font-family: 'Merriweather', serif;
         }
-
-        /* Responsive layout adjustments for images */
-        .image-row2 {
+        .project-description h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            margin-bottom: 0.2em;
+        }
+        .project-description h3, .project-description h4 {
+            margin-top: 1.2em;
+            color: #2d3a4a;
+        }
+        .project-description .overview, .project-description .outcome {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+        .project-description ol, .project-description ul {
+            margin-left: 1.5em;
+            margin-bottom: 0.7em;
+        }
+        .project-description .tech-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+        }
+        .project-description .tech-list li {
+            background: #e3e7ed;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 1em;
         }
 
-        .project2 {
-            flex: 1 1 45%; /* 2 items per row for medium and larger screens */
-            max-width: 45%;
+        /* Gallery Section */
+        .gallery-section {
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            padding: 0 16px;
         }
-
-        /* Ensure images scale well within containers */
-        .image-container2 img {
+        .gallery-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7em;
+            margin-bottom: 1.2em;
+            color: #2d3a4a;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            justify-items: center;
+        }
+        .gallery-grid figure {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            overflow: hidden;
+        }
+        .gallery-grid img {
             width: 100%;
-            height: auto;
+            max-width: 220px;
+            height: 180px;
+            object-fit: cover;
             display: block;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.25s;
+        }
+        .gallery-grid figure:hover {
+            box-shadow: 0 4px 24px rgba(60,60,90,0.13);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .gallery-grid figure:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-grid figcaption {
+            font-size: 1em;
+            color: #444;
+            padding: 10px 0 12px 0;
+            background: #f4f6fa;
         }
 
         /* Mobile adjustments */
         @media (max-width: 600px) {
-            .project2 {
-                flex: 1 1 100%; /* Stack items on small screens */
-                max-width: 100%;
+            .project-description {
+                padding: 14px 4vw 14px 4vw;
             }
-
-            .sidenav ul, .sidenav ul li {
-                font-size: 16px; /* Adjust font for smaller screens */
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
-
-            .details .center {
-                padding: 10px;
+            .gallery-title {
+                font-size: 1.2em;
             }
+        }
+        /* Sidenav and other existing styles remain unchanged */
+        .demo-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+            margin: 24px auto 20px auto;
+            padding: 8px 20px;
+            background: #6e8796;
+            color: #fff;
+            font-size: 1em;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 18px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(110,135,150,0.10);
+            transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+            position: relative;
+            outline: none;
+        }
+        .demo-button .play-icon {
+            font-size: 1.1em;
+            margin-right: 4px;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));
+        }
+        .demo-button:hover, .demo-button:focus {
+            background: #5a6e7c;
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px rgba(110,135,150,0.18);
+            color: #fff;
         }
     </style>
 </body>

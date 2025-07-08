@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Neura</title>
+    <title>Chicago</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,15 +35,93 @@
     </nav>
     
     <main>
-        <h2 class="neura">Chicago Street Accidents Analysis</h2>
-        <p > <div class="details"><div class="center">Conducted comprehensive data analysis on traffic accidents by integrating various data sources, including traffic patterns, road conditions, demographics, vehicles, and police districts. Leveraged machine learning, deep learning, and data mining algorithms to uncover accident causes and highlight critical insights in this area.
-            <br/>
-            <br/>
-            <br/>
-             
-        </p>
-            
-
+        <section >
+            <h2 class="neura">Chicago Street Accidents Analysis</h2>
+            <h3>Project Title: Chicago Accidents Dataset Analysis</h3>
+            <p class="overview">This project involved an in-depth data science analysis of traffic accident data from the City of Chicago. Using open-source crash report datasets, the goal was to understand the key contributing factors behind accident occurrences and severities, identify spatial and temporal trends, and develop predictive models to support data-driven decision-making in traffic safety and urban planning.</p>
+            <h4>1. Dataset and Preparation:</h4>
+            <ul>
+                <li><b>Data Source:</b> Open crash report data provided by the City of Chicago Data Portal.</li>
+                <li><b>Cleaning and Preprocessing:</b> Used Pandas and NumPy to handle missing values, normalize date/time formats, standardize categorical entries, and convert geolocation fields into usable formats.</li>
+                <li><b>Feature Engineering:</b> Extracted relevant features such as time of day, weather conditions, road type, lighting conditions, and driver behavior indicators.</li>
+                <li><b>Geospatial Processing:</b> Incorporated GeoPandas and Shapely to geocode accident locations, map them to neighborhoods/wards, and prepare spatial features for analysis.</li>
+            </ul>
+            <h4>2. Exploratory Data Analysis (EDA):</h4>
+            <ul>
+                <li><b>Descriptive Analysis:</b> Examined frequency and distribution of accidents across various categories such as vehicle type, age group, weather, and road conditions.</li>
+                <li><b>Severity Analysis:</b> Assessed relationships between accident severity and contributing factors using Chi-Square Tests for independence.</li>
+                <li><b>Distance Metrics:</b> Applied Hamming, Jaccard, Cosine, and Minkowski distances to analyze similarity patterns between categorical and binary features.</li>
+                <li><b>Visualization:</b> Created heatmaps, time-series plots, accident density maps, and cluster plots using Matplotlib and Seaborn.</li>
+            </ul>
+            <h4>3. Spatial and Temporal Insights:</h4>
+            <ul>
+                <li><b>Time-based Trends:</b> Identified rush hour peaks, weekend vs weekday patterns, and seasonal fluctuations in crash occurrences.</li>
+                <li><b>Location-based Analysis:</b> Visualized high-incident zones using spatial density mapping and overlaid results on neighborhood maps for hotspot detection.</li>
+                <li><b>Correlations:</b> Discovered notable correlations between lighting, speed limits, and severity levels based on accident locations and conditions.</li>
+            </ul>
+            <h4>4. Predictive Modeling:</h4>
+            <ul>
+                <li><b>Problem Framing:</b> Framed accident severity as a multi-class classification task.</li>
+                <li><b>Modeling:</b> Built and evaluated models including Decision Trees, Random Forests, and Logistic Regression using scikit-learn.</li>
+                <li><b>Feature Importance:</b> Analyzed the influence of variables such as weather, time of day, and road type on accident outcomes.</li>
+                <li><b>Validation:</b> Used cross-validation and confusion matrices to ensure robust model performance and generalization.</li>
+            </ul>
+            <h4>Technologies Used:</h4>
+            <ul class="tech-list">
+                <li>Python: Main programming language for implementation.</li>
+                <li>Pandas & NumPy: For data manipulation and transformation.</li>
+                <li>Scikit-learn & SciPy: For modeling and statistical analysis (distance metrics and Chi-Square tests).</li>
+                <li>GeoPandas & Shapely: For geospatial data processing and visualization.</li>
+                <li>Matplotlib & Seaborn: For comprehensive and interpretable data visualization.</li>
+            </ul>
+            <h4>Outcome:</h4>
+            <p class="outcome">The project provided critical insights into the causes and distribution of traffic accidents in Chicago, enabling more effective urban traffic planning and public safety strategies. The predictive models developed serve as a foundation for real-time risk assessment and resource allocation.</p>
+        </section>
+        <section class="gallery-section">
+            <h3 class="gallery-title">Chicago Gallery</h3>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="Chicago.png" alt="Chicago Map">
+                    <!-- <figcaption>Chicago Map</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago1.png" alt="Accident Data Visualization">
+                    <!-- <figcaption>Accident Data Visualization</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago2.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago3.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago4.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago5.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago6.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago7.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago8.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+                <figure>
+                    <img src="Chicago9.png" alt="Traffic Density Heatmap">
+                    <!-- <figcaption>Traffic Density Heatmap</figcaption> -->
+                </figure>
+            </div>
+        </section>
     </main>
     <style>
         /* Make the page responsive */
@@ -92,6 +169,106 @@
 
             .details .center {
                 padding: 10px;
+            }
+        }
+        .project-description {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 32px 24px 24px 24px;
+            margin: 32px auto 24px auto;
+            max-width: 900px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            font-family: 'Merriweather', serif;
+        }
+        .project-description h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            margin-bottom: 0.2em;
+        }
+        .project-description h3, .project-description h4 {
+            margin-top: 1.2em;
+            color: #2d3a4a;
+        }
+        .project-description .overview, .project-description .outcome {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+        .project-description ol, .project-description ul {
+            margin-left: 1.5em;
+            margin-bottom: 0.7em;
+        }
+        .project-description .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+        }
+        .project-description .tech-list li {
+            background: #e3e7ed;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 1em;
+        }
+        .gallery-section {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            padding: 0 16px;
+        }
+        .gallery-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            margin-bottom: 1.2em;
+            color: #2d3a4a;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            justify-items: center;
+        }
+        .gallery-grid figure {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            overflow: hidden;
+        }
+        .gallery-grid img {
+            width: 100%;
+            max-width: 220px;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.25s;
+        }
+        .gallery-grid figure:hover {
+            box-shadow: 0 4px 24px rgba(60,60,90,0.13);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .gallery-grid figure:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-grid figcaption {
+            font-size: 1em;
+            color: #444;
+            padding: 10px 0 12px 0;
+            background: #f4f6fa;
+        }
+        @media (max-width: 600px) {
+            .project-description {
+                padding: 14px 4vw 14px 4vw;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-title {
+                font-size: 1em;
             }
         }
     </style>
